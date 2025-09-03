@@ -1,5 +1,5 @@
 public class Tarefaservico {
-    public void mostrarTarefa(Tarefa tarefa) {
+    public void visualizar(Tarefa tarefa) {
         System.out.println("ID: " + tarefa.getId());
         System.out.println("Título: " + tarefa.getTitulo());
         System.out.println("Descrição: " + tarefa.getDescricao());

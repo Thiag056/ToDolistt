@@ -9,11 +9,11 @@ public class Tarefa {
     private boolean completa;
     private String dataAgora;
 
-    public Tarefa(int id, String Titulo, String descricao, String dataAgora){
+    public Tarefa(int id, String Titulo, String descricao, String dataAgora, boolean completa){
         this.id = id;
         this.Titulo = Titulo;
         this.descricao = descricao;
-        this.completa = false;
+        this.completa = completa;
         this.dataAgora = dataAgora;
 
     }
