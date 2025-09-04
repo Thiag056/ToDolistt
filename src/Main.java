@@ -6,6 +6,8 @@ public class Main {
 
         Tarefa T = servico.criar();
 
+        System.out.println("Título: " + T.getTitulo());
+
 
 
     }
