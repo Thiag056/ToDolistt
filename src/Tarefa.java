@@ -1,7 +1,5 @@
 import java.time.LocalDateTime;
 
-
-
 public class Tarefa {
     private int id;
     private String Titulo;
@@ -17,39 +15,30 @@ public class Tarefa {
         this.dataAgora = dataAgora;
 
     }
-
     public int getId() {
-        return id;
+        return this.id;
     }
-
     public String getTitulo() {
-        return Titulo;
+        return this.Titulo;
     }
-
     public void setTitulo(String Titulo) {
         this.Titulo = Titulo;
     }
-
     public String getDescricao() {
-        return descricao;
+        return this.descricao;
     }
-
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
     public boolean isCompleta() {
-        return completa;
+        return this.completa;
     }
-
     public void setCompleta(boolean completa) {
         this.completa = completa;
     }
-
     public String getDataAgora() {
-        return dataAgora;
+        return this.dataAgora;
     }
-
     public void setDataAgora(String dataAgora) {
         this.dataAgora = dataAgora;
     }
