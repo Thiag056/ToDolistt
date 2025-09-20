@@ -1,4 +1,4 @@
-package ucb.aplicação.model.tarefas;
+package ucb.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,36 +19,28 @@ public class Tarefa {
         this.dataAgora = LocalDateTime.now();
     }
     public int getId() {
-        return id;
+        return this.id;
     }
-
     public String getTitulo() {
-        return Titulo;
+        return this.Titulo;
     }
-
+    public void setTitulo(String Titulo) {
+        this.Titulo = Titulo;
+    }
     public String getDescricao() {
-        return descricao;
+        return this.descricao;
     }
-
-    public boolean isCompleta() {
-        return completa;
-    }
-
-    public LocalDateTime get DataDeCriacao() {
-        return DataDeCriacao;
-    }
-
-    // Setters
-    public void setTitulo(String titulo) {
-        this.Titulo = titulo;
-    }
-
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
+    public boolean isCompleta() {
+        return this.completa;
+    }
     public void setCompleta(boolean completa) {
         this.completa = completa;
+    }
+    public LocalDateTime getDataAgora() {
+        return this.dataAgora;
     }
 
     @Override
