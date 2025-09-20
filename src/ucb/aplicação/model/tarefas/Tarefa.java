@@ -1,17 +1,22 @@
 package ucb.aplicação.model.tarefas;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Tarefa {
     private int id;
     private String Titulo;
     private String descricao;
     private boolean completa;
-    private String dataAgora;
+    private LocalDateTime dataAgora;
 
-    public Tarefa() {
+    public Tarefa(int id, String titulo, String descricao) {
 
-
+        this.id = id;
+        this.Titulo = titulo;
+        this.descricao = descricao;
+        this.completa = false;
+        this.dataAgora = LocalDateTime.now();
     }
     public int getId() {
         return this.id;
@@ -40,4 +45,15 @@ public class Tarefa {
     public void setDataAgora(String dataAgora) {
         this.dataAgora = dataAgora;
     }
-}
+
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String dataFormatada = dataAgora.format(formatter);
+
+        return "ID: " + id +
+                " | Título: " + Titulo +
+                " | Descrição: " + descricao +
+                " | Concluída: " + (completa ? "Sim" : "Não") +
+                " | Criada em: " + dataFormatada;
+    }}
