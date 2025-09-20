@@ -19,5 +19,47 @@ public class Tarefaservico {
         System.out.println("Tarefa criada com sucesso!");
     }
 
+    public void listar() {
+        if (Tarefas.isEmpty()) {
+            System.out.println("Nenhuma tarefa cadastrada.");
+            return;
+        }
+        System.out.println("\n--- Lista de Tarefas ---");
+        for (Tarefa t : Tarefas) {
+            System.out.println(t);
+        }
+        System.out.println("------------------------");
+    }
 
+    public void atualizar(int id, String novoTitulo, String novaDescricao) {
+        for (Tarefa t : Tarefas) {
+            if (t.getId() == id) {
+                t.setTitulo(novoTitulo);
+                t.setDescricao(novaDescricao);
+                System.out.println("✏️ Tarefa atualizada!");
+                return;
+            }
+        }
+        System.out.println("⚠️ Tarefa com ID " + id + " não encontrada.");
+    }
+
+    public void remover(int id) {
+        boolean removida = Tarefas.removeIf(t -> t.getId() == id);
+        if (removida) {
+            System.out.println("🗑️ Tarefa com ID " + id + " removida.");
+        } else {
+            System.out.println("⚠️ Tarefa com ID " + id + " não encontrada.");
+        }
+    }
+
+    public void concluir(int id) {
+        for (Tarefa t : Tarefas) {
+            if (t.getId() == id) {
+                t.setCompleta(true);
+                System.out.println("✅ Tarefa com ID " + id + " concluída!");
+                return;
+            }
+        }
+        System.out.println("⚠️ Tarefa com ID " + id + " não encontrada.");
+    }
 }
