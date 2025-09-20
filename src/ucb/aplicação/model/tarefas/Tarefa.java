@@ -19,31 +19,36 @@ public class Tarefa {
         this.dataAgora = LocalDateTime.now();
     }
     public int getId() {
-        return this.id;
+        return id;
     }
+
     public String getTitulo() {
-        return this.Titulo;
+        return Titulo;
     }
-    public void setTitulo(String Titulo) {
-        this.Titulo = Titulo;
-    }
+
     public String getDescricao() {
-        return this.descricao;
+        return descricao;
     }
+
+    public boolean isCompleta() {
+        return completa;
+    }
+
+    public LocalDateTime get DataDeCriacao() {
+        return DataDeCriacao;
+    }
+
+    // Setters
+    public void setTitulo(String titulo) {
+        this.Titulo = titulo;
+    }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public boolean isCompleta() {
-        return this.completa;
-    }
+
     public void setCompleta(boolean completa) {
         this.completa = completa;
-    }
-    public String getDataAgora() {
-        return this.dataAgora;
-    }
-    public void setDataAgora(String dataAgora) {
-        this.dataAgora = dataAgora;
     }
 
     @Override
