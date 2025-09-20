@@ -36,19 +36,19 @@ public class Tarefaservico {
             if (t.getId() == id) {
                 t.setTitulo(novoTitulo);
                 t.setDescricao(novaDescricao);
-                System.out.println("✏️ Tarefa atualizada!");
+                System.out.println("Tarefa atualizada!");
                 return;
             }
         }
-        System.out.println("⚠️ Tarefa com ID " + id + " não encontrada.");
+        System.out.println("Tarefa com ID " + id + " não encontrada.");
     }
 
     public void remover(int id) {
         boolean removida = Tarefas.removeIf(t -> t.getId() == id);
         if (removida) {
-            System.out.println("🗑️ Tarefa com ID " + id + " removida.");
+            System.out.println("Tarefa com ID " + id + " removida.");
         } else {
-            System.out.println("⚠️ Tarefa com ID " + id + " não encontrada.");
+            System.out.println("Tarefa com ID " + id + " não encontrada.");
         }
     }
 
@@ -56,10 +56,10 @@ public class Tarefaservico {
         for (Tarefa t : Tarefas) {
             if (t.getId() == id) {
                 t.setCompleta(true);
-                System.out.println("✅ Tarefa com ID " + id + " concluída!");
+                System.out.println(" Tarefa com ID " + id + " concluída!");
                 return;
             }
         }
-        System.out.println("⚠️ Tarefa com ID " + id + " não encontrada.");
+        System.out.println(" Tarefa com ID " + id + " não encontrada.");
     }
 }
